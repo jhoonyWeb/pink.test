@@ -1,0 +1,8 @@
+@import "_mixins/font-face";
+
+@include font-face("roboto-example", "../fonts/RobotoRegular/RobotoRegular");
+@include font-face("roboto-example", "../fonts/RobotoBold/RobotoBold", bold);
+@include font-face("opensans.ex", "../fonts/OpenSans-Bold, bold");
+@include font-face("opensans.ex", "../fonts/OpenSans-Regular/OpenSans-Regular");
+@include font-face("opensans.ex", "../fonts/OpenSans-ExtraBold/OpenSans-ExtraBold", 800);
+@include font-face("opensans.ex", "../fonts/OpenSans-Light/OpenSans-Light", 300);

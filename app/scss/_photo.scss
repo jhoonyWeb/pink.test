@@ -1,0 +1,317 @@
+@import "vars";
+@import "fonts";
+@import "media";
+
+/*{ 
+	border: 1px solid red;
+}*/
+/**************header*************/
+.main__title {
+	font-size: 50px;
+	line-height: auto;
+	font-weight: lighter;
+	color: #fff;
+	width: 342px;
+	text-align: center;
+	margin: 0 auto;
+	padding-top: 110px;
+	padding-bottom: 100px;
+}
+
+.page__header-photo {
+	margin-bottom: 100px;
+}
+/**************header*************/
+
+/************photo****************/
+
+.photo__title {
+	font-size: 18px;
+	line-height: 30px;
+	font-weight: normal;
+	text-align: center;
+	color: #000;
+	margin: 0 auto;
+	margin-bottom: 95px;
+}
+
+.photo__post {
+	display: flex;
+	justify-content: space-between;
+	max-width: 940px;
+	margin: 0 auto;
+	flex-wrap: wrap;
+}
+
+.post__panarama img {
+width: 100%;
+height: auto;
+}
+
+.post__panarama {
+	position: relative;
+}
+
+.photo__post-today {
+	position: absolute;
+	background: $accent;
+	color: #fff;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-left: 30px;
+	padding-right: 30px;
+	font-size: 12px;
+	text-transform: uppercase;
+	font-weight: bold;
+	transform: translateX(300px);
+	top: 55px;
+	left: 50%;
+
+	display: inline-block;
+}
+
+.post {
+	margin-top: 50px;
+}
+
+
+.post__panarama-blog {
+	background: $blog;
+	max-width: 940px;
+	margin: 0 auto;
+	padding-top: 20px;
+	position: relative;
+}
+.blog__author {
+@include author;
+}
+
+.blog__panoram-text {
+	padding-left: 25px;
+	font-size: 14px;
+	line-height: 24px;
+	padding-bottom: 20px;
+	margin: 0;
+}
+
+.blog__time {
+	font-size: 12px;
+}
+
+.blog__likes-panoram {
+	padding-left: 635px;
+	font-size: 12px;
+	color: $accent;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.blog__likes-panoram::after{
+	content: "";
+	position: absolute;
+	background-image: url('../img/heart.svg');
+	width: 13px;
+	height: 12px;
+	top: 30px;
+	right: 30px;
+	cursor: pointer;
+}
+
+.post {
+	width: 300px;
+	background: $blog;
+	position: relative;
+	padding-bottom: 30px;
+} 
+
+.post__blog {
+	margin-top: 15px;
+}
+
+.blog__likes {
+	@include likes;
+}
+
+
+.blog__likes::after {
+	content: "";
+	position: absolute;
+	background-image: url('../img/heart.svg');
+	width: 13px;
+	height: 12px;
+	bottom: 36px;
+	right: 40px;
+	cursor: pointer;
+}
+
+.blog__text {
+	@include text;
+	height: 65px;
+}
+
+
+.photo {
+	margin-bottom: 60px;
+}
+
+/***************photo*****************/
+
+/***************redactor*****************/
+
+.redactor__title {
+	font-size: 18px;
+	line-height: 30px;
+	font-weight: normal;
+	text-align: center;
+	color: #000;
+	margin: 0 auto;
+}
+
+.redactor__wrapper {
+	background: $form;
+	max-width: 940px;
+	margin: 0 auto;
+	margin-top: 60px;
+}
+
+.redactor__setting {
+	display: flex;
+	max-width: 801px;
+	margin: 0 auto;
+	justify-content: space-between;
+}
+
+.redactor__setting-range {
+	border-bottom: 1px solid #dddfe0;
+	padding-bottom: 27px;
+	padding-top: 10px;
+  width: 410px;
+	
+}
+
+.redactor__setting-chose {
+	margin-top: 70px;
+	position: relative;
+}
+
+.redactor__setting-image {
+	padding-top: 55px;
+	padding-bottom: 55px;
+}
+
+.redactor__setting-range--line {
+	-webkit-appearance: none; //убрать стили по умолчанию
+	width: 290px;
+	height: 2px;
+	background: #000;
+	margin-left: 90px;
+	
+}
+.redactor__setting-range--line::-webkit-slider-thumb {  //убрать, изменить бегунок 
+	-webkit-appearance: none;
+	width: 14px;
+	height: 14px;
+	border:2px solid $accent;
+	border-radius: 51%;
+	background: #dddfe0;
+	cursor: pointer;
+	&:hover {
+		background: $accent;
+	}
+	&:active {
+		background: $accent;
+	}
+}
+
+.editor__crop::before {
+	content: "";
+	display: block;
+	position: absolute;
+	background-image: url("../img/icon-editor-crop--active.svg");
+	width: 44px;
+	height: 46px;
+	left: 0;
+	top: 0;
+}
+
+.editor__fill::before {
+	content: "";
+	display: block;
+	position: absolute;
+	background-image: url("../img/icon-editor-fil--active.svg");
+	width: 44px;
+	height: 46px;
+	left: 0;
+	top: 75px;
+}
+
+.editor__contrast::before {
+	content: "";
+	display: block;
+	position: absolute;
+	background-image: url("../img/icon-editor-contrast--active.svg");
+	width: 32px;
+	height: 32px;
+	left: 5px;
+	top: 150px;
+}
+
+.redactor__btn {
+	margin-top: 145px;
+	display: flex;
+	justify-content: space-between;
+}
+
+
+.redactor__btn-active {
+	display: inline-block;
+	border: 3px solid $accent;
+	background: transparent;
+	color: $accent;
+	font-size: 16px;
+	font-family: $default-font;
+	font-weight: bold;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 50px;
+	cursor: pointer;
+&:hover {
+	background: $accent;
+	color: #fff;
+	transition: all .3s;
+	&:active span {
+		opacity: 0.3;
+	}
+}
+}
+
+.redactor__btn-cancel {
+	display: inline-block;
+	border: 3px solid #dddfe0;
+	background: transparent;
+	color: #dddfe0;
+	font-size: 16px;
+	font-family: $default-font;
+	font-weight: bold;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 50px;
+	cursor: pointer;
+	&:hover {
+		border-color: #b5b9be;
+		color: #b5b9be;
+		&:active {
+			background: #b5b9be;
+			color: #dddfe0;
+		}
+	}
+}
+
+.redactor__setting-chose--mobile {
+	display: none;
+}
+
+/***************redactor*****************/

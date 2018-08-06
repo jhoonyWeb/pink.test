@@ -1,0 +1,360 @@
+@import "vars";
+@import "fonts";
+@import "media";
+
+
+/*{ 
+	border: 1px solid red;
+}*/
+
+
+input:focus:required {
+	border-color: $accent !important;
+}
+::placeholder {
+	font-size: 14px; 
+	font-family: $default-font;
+}
+
+
+.title__form {
+	font-size: 50px;
+	font-weight: lighter;
+	color: #fff;
+	width: 754px;
+	text-align: center;
+	margin: 0 auto;
+	padding-top: 110px;
+	padding-bottom: 100px;
+}
+/************feedback__form-header****************/
+.feedback__form-header {
+	display: flex;
+	width: 940px;
+	margin: 0 auto;
+}
+
+
+.feedback__name {
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	width: 470px;
+}
+
+.feedback__form-header label {
+margin-right: 20px;
+font-size: 14px;
+display:inline-block; 
+color: $accent;
+}
+
+
+.title__feedback {
+	font-size: 18px;
+	line-height: 30px;
+	width: 760px;
+	margin: 0 auto;
+	text-align: center;
+	font-weight: 400;
+	margin-top: 90px;
+	margin-bottom: 80px;
+}
+.feedback__name div:nth-child(3){
+	margin-bottom: 0;
+}
+.feedback__name div {
+	margin-bottom: 55px;
+}
+
+.feedback__name input{
+	width: 340px;
+	height: 60px;
+	border-radius: 2px;
+	border: 2px solid $form;
+	padding-left: 20px;
+	&:hover {
+		border-color: #000;
+	}
+	&:focus{
+		border-color: $accent;
+	}
+}
+
+.feedback__second-name input {
+	width: 375px;
+}
+
+.soft__title {
+	margin-bottom: 40px;
+	@include form-title;
+	padding: 0 25px;
+
+}
+
+ .soft {
+	 position: relative;
+	width: 430px;
+	border: 2px solid $form;
+	margin: 0;
+	padding-left: 3px;
+bottom: 12px;
+	
+}
+
+ .soft__btn {
+	margin-left: 110px;
+}
+	.radio__btn {
+		display: none;
+	}
+
+	.radio__btn-custom {
+		position: relative;
+		width: 30px;
+		height: 30px;
+		border: 2px solid $form;
+		border-radius: 50%;
+	}
+	label:hover .radio__btn-custom {
+		border-color: #000;
+	}
+
+	.radio__btn-text  {
+		padding-left: 20px;
+		color: #000;
+		font-size: 18px;
+	}
+	
+	.radio__btn-custom, .radio__btn-text {
+		display: inline-block;
+		vertical-align: top;
+	}
+	
+	.radio__btn:checked + .radio__btn-custom::before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 9px;
+		right: 3px;
+		left: 9px;
+		width: 12px;
+		height: 12px;
+		background: $accent;
+		border-radius: 50%;
+	}
+
+	.soft__btn-iOS {
+		margin-bottom: 35px;
+	}
+
+	.soft__btn-Android {
+		margin-bottom: 35px;
+	}
+
+	.soft__btn-Windows {
+		margin-bottom: 50px;
+	}
+
+
+
+	/************feedback__form-header****************/
+
+	/************feedback__form-middle****************/
+.feedback__form-middle {
+	border: 2px solid $form;
+	width: 940px;
+	margin: 0 auto;
+	margin-top: 40px;
+	padding: 0;
+}
+	
+.feedback__form-middle-title {
+	margin-bottom: 20px;
+	@include form-title;
+}
+
+.contact__form {
+	display: flex;
+	justify-content: space-between;	
+	width: 820px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+	}
+
+.contact__form input {
+	width: 371px;
+	height: 58px;
+	border-radius: 2px;
+	border: 2px solid $form;
+	padding-left: 20px;
+	&:hover {
+		border-color: #000;
+	}
+	&:focus {
+		border-color: $accent;
+	}
+}
+
+.contact__form label {
+	color: $accent;
+	font-size: 14px;
+	padding-left: 20px;
+}
+
+.contact__form-phone input {
+	background-image: url(../img/phone.png);
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+
+.contact__form-email input {
+	background-image: url(../img/mail.png);
+	background-repeat: no-repeat;
+	background-position: right;
+}
+	/************feedback__form-middle****************/
+
+	/************feedback__form-middle--pt2***********/
+
+	.feedback__form-ckeck {
+		border: 2px solid $form;
+		width: 940px;
+		margin: 0 auto;
+		margin-top: 50px;
+		padding: 0;
+	}
+		.feedback__form-ckeck--title {
+			padding: 0 30px;
+			@include form-title;
+		}
+	
+
+.feedback__form-options {
+	display: flex;
+	flex-wrap:wrap;
+	justify-content: space-between;
+  width: 820px;
+	margin: 0 auto;
+} 
+
+.feedback__form-checkbox {
+	flex-basis: 260px; /******задать размер элементов****/
+	margin-bottom: 30px;
+	margin-top: 15px;
+}
+
+.feedback__form-checkbox input{
+	display: none;
+}
+
+.checkbox__custom {
+position: relative;
+width: 30px;
+height: 30px;
+border: 2px solid $form;
+margin-right: 10px;
+margin-left: 10px;
+}
+
+.checkbox__custom, .checkbox__text {
+	display: inline-block;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+label:hover .checkbox__custom {
+border-color: #000;
+}
+
+input:checked + .checkbox__custom::before {
+	content: "\2713";
+	display: block;
+	position: absolute;
+	color: $accent;
+	font-size: 30px;
+	top: -12px;
+	left: 3px;
+}
+	/************feedback__form-middle--pt2***********/
+	/************feedback__form-bottom***************/
+	.feedback__form-bottom {
+		border: 2px solid $form;
+		width: 940px;
+		margin: 0 auto;
+		margin-top: 50px;
+		padding: 0;
+	}
+		.feedback__form-bottom--title{
+			padding: 0 40px;
+			@include form-title;
+		}
+	
+
+	.feedback__form-bottom-message {
+		text-align: center;
+	}
+	 .message__field {
+		width: 820px;
+		height: 125px;
+		border: 2px solid $form ; 
+		resize: none;
+		margin-top: 40px;
+		margin-bottom: 40px;
+		padding-left: 10px;
+		padding-right: 10px;
+		&:hover {
+			border-color: #000;
+		}
+		&:focus {
+			border-color: $accent;
+		}
+	}
+/************feedback__form-bottom***************/
+/************feedback__send**********************/
+	.btn__form {
+		background: #2aab6d;
+		color: #fff;
+		font-weight: bold;
+		font-size: 16px;
+		font-family: $default-font;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 50px;
+	padding-right: 50px;
+		text-transform: uppercase;
+		cursor: pointer;
+		&:hover{
+			background: #1c9b5e;
+		}
+	}
+
+	.feedback__send {
+		max-width: 940px;
+		display: flex;
+		justify-content: space-between;
+		margin: 0 auto;
+		margin-top: 60px;
+	}
+
+	.feedback__send-required--main {
+		text-transform: uppercase;
+		display: inline-block;
+		padding-top: 25px;
+	}
+
+
+	.feedback__send-required  sup {
+		color: $accent;
+	}
+
+	.feedback__send-required--inner {
+		display: none;
+	}
+/************feedback__send**********************/
+
+.page__footer-form {
+	width: 940px;
+	margin: 0 auto;
+}
